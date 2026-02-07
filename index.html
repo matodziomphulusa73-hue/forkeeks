@@ -7,6 +7,7 @@
     <!-- External Dependencies -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -53,15 +54,9 @@
         color: white;
       }
     </style>
-
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@19.2.4",
-        "react-dom/client": "https://esm.sh/react-dom@19.2.4/client"
-      }
-    }
-    </script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+   
   </head>
   <body>
     <div id="root"></div>
@@ -76,9 +71,8 @@
     </svg>
 
     <!-- React Application Logic -->
-    <script type="text/babel" data-presets="react,typescript" data-type="module">
-      import React, { useState, useEffect, useRef, useMemo } from 'react';
-      import ReactDOM from 'react-dom/client';
+    <script type="text/babel">
+      const { useState, useEffect, useRef, useMemo } = React;
 
       // --- Constants ---
       const MILESTONES = [
